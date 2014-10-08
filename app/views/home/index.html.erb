@@ -4,9 +4,10 @@
 <!--make action  -->
 <!--decide on method GET or POST  -->
 
+<p><%= @current_vendor.inspect %></p>
 
 <form action="/login" method="POST">
-  Vendor <input type="text" name="login[vendor_name]" method=POST/>
+  Vendor <input type="text" name="login[vendor_name]" />
 
   <button name="login[button]">Submit</button>
 
