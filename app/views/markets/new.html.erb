@@ -1,0 +1,7 @@
+<h2>Add a new Market to the database</h2>
+
+<%= form_for @market do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create" %>
+<% end %>

@@ -9,11 +9,16 @@ class VendorsController < ApplicationController
 
   def create
     # raise params.inspect
-    @vendor = Vendor.new(params.require(:vendor).permit(:name, :market_id))
-    if @vendor.save
-      redirect_to "/"
+    if params[:vendor][:market_id] == nil
+      redirect_to "/markets/new"
     else
-      render :new #renders the new.html.erb again
+      @vendor = Vendor.new(params.require(:vendor).permit(:name, :market_id))
+
+      if @vendor.save
+        redirect_to "/"
+      else
+        render :new #renders the new.html.erb again
+      end
     end
   end
 

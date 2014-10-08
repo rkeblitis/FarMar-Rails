@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get "/markets",       to: "markets#index"
+  get "/markets/new",   to: "markets#new"
+  post "/markets",      to: "markets#create"
   get "/login",         to: "home#login"
   get "/vendors/index", to: "vendors#index"
   get "/vendors/new",   to: "vendors#new"
