@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get "/markets",     to: "markets#index"
   get "/login", to: "home#login"
+  get ""
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
