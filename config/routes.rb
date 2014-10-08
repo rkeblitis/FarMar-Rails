@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
-  get "/markets",     to: "markets#index"
-  get "/login",       to: "home#login"
-  get "/signup",      to: "home#signup"
-  post "/signup",     to: "home#create"
+  get "/markets",       to: "markets#index"
+  get "/login",         to: "home#login"
+  get "/vendors/index", to: "vendors#index"
+  get "/vendors/new",   to: "vendors#new"
+  post "/vendors",      to: "vendors#create"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
