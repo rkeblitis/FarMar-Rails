@@ -1,0 +1,9 @@
+<h2>New Vendor Signup</h2>
+
+<%= form_for @vendor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :market_id %>
+  <%= f.text_area :market_id %>
+  <%= f.submit "Create" %>
+<% end %>
