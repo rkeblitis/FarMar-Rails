@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get   "/vendors/new",   to: "vendors#new"
   post  "/vendors",       to: "vendors#create"
   get   "/products",      to: "products#index"
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

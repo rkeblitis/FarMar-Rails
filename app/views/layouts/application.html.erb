@@ -7,8 +7,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header">
+  <div class="header_container">
+    
+    <div class="login_status">
+      <h3><%= @login_status.inspect %></h3>
+    </div>
 
-<%= yield %>
+    <div class="brand">
+      <h1>FarMarDotChelle</h1>
+    </div>
 
+    <div class="nav">
+      <ul class="horizontal-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Markets</a></li>
+        <li><a href="#">Vendors</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </div>
+  </div> <!-- end header container -->
+
+</div><!-- end header div -->
+
+<div class="content_container">
+  <%= yield %>
+</div>
+
+<div class="footer">
+  This is a footer
+</div>
 </body>
 </html>

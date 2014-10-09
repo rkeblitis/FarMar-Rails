@@ -1,0 +1,30 @@
+
+.header_container{
+  background: red;
+  width: 1000px;
+  margin: auto;
+}
+
+.header h1{
+  margin: 30px;
+  font-size: 40pt;
+  display: inline-block;
+  background: yellow;
+}
+
+.nav{
+  background: pink;
+  display: inline-block;
+}
+
+.login_status {
+  display: inline-block;
+  background: orange;
+  float: right;
+}
+
+.horizontal-links > li {
+  display: inline-block;
+  list-style: none;
+  padding: 20px;
+}
