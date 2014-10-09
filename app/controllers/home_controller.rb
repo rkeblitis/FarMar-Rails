@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     if Vendor.find_by(name: params[:login][:vendor_name])
       session[:user_id] = Vendor.find_by(name: params[:login][:vendor_name]).id
       @current_vendor = Vendor.find(session[:user_id])
-      render :index
+      redirect_to "/products"
     else
       render :index
     end

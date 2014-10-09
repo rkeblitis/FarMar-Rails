@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get   "/vendors/index", to: "vendors#index"
   get   "/vendors/new",   to: "vendors#new"
   post  "/vendors",       to: "vendors#create"
+  get   "/products",      to: "products#index"
 
 
 
