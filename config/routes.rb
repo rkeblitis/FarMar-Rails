@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
   post  "/login",         to: "home#login"
-  get   "/markets",       to: "markets#index"
+  get   "/markets",       to: "markets#index", as: :markets
   get   "/markets/new",   to: "markets#new"
   post  "/markets",       to: "markets#create"
   get   "/",              to: "home#index"
   get   "/vendors/index", to: "vendors#index"
-  get   "/vendors/new",   to: "vendors#new"
+  get   "/vendors/new",   to: "vendors#new", as: :new_vendor
   post  "/vendors",       to: "vendors#create"
   get   "/products",      to: "products#index"
-  
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
