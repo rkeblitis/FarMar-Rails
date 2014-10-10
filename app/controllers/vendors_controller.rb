@@ -9,7 +9,7 @@ class VendorsController < ApplicationController
 
   def create
     # raise params.inspect
-    if (params[:vendor][:market_id] == nil or params[:vendor][:market_id] == "")
+    if (params[:vendor][:market_id] == nil || params[:vendor][:market_id] == "")
       redirect_to "/markets/new"
     else
       @vendor = Vendor.new(params.require(:vendor).permit(:name, :market_id))
