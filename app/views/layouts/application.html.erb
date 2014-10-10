@@ -14,11 +14,12 @@
   <div class="header">
 
     <div class="login_status">
-      <% if @current_vendor %>
-      <h3>You are logged in as <%= @current_vendor.name %></h3>
-      <% else %>
-      <h3>You are not logged in</h3>
-      <% end %>
+      <h3><%= session[:user_id].inspect %></h3>
+      <!-- <% if @current_vendor %> -->
+      <!-- <h3>You are logged in as <%= @current_vendor.name %></h3> -->
+      <!-- <% else %> -->
+      <!-- <h3>You are not logged in</h3> -->
+      <!-- <% end %> -->
     </div>
 
     <div class="brand">
