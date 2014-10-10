@@ -19,4 +19,10 @@ class HomeController < ApplicationController
   def index
   end
 
+  def logout
+    session[:user_id] = nil
+    render :index
+  end
+
+
 end

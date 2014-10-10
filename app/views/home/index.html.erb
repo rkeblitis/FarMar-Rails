@@ -4,11 +4,14 @@
 <!--make action  -->
 <!--decide on method GET or POST  -->
 
-<p><%= @current_vendor.inspect %></p>
+<% if session[:user_id] != nil %>
+<p><%= Vendor.find(session[:user_id]).inspect %></p>
+<% end %>
 
 <form action="/login" method="POST">
   Vendor <input type="text" name="login[vendor_name]" />
 
   <button name="login[button]">Login</button>
   <%= link_to "Sign Up", new_vendor_path %>
+  <%= link_to "SIGN OUT", logout_path %>
 <form>

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get   "/vendors/new",   to: "vendors#new", as: :new_vendor
   post  "/vendors",       to: "vendors#create"
   get   "/products",      to: "products#index"
+  get   "/logout",        to: "home#logout", as: :logout
 
 
 
