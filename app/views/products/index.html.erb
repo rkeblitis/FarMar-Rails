@@ -1,12 +1,16 @@
 <h2>PRODUCTS PAGE!!!</h2>
 
-<p> Hi <%= @current_vendor.name %></p>
-<ul>
-  <% @current_vendor.products.each do |product| %>
-    <li><%= product.name %></li>
-  <% end %>
-</ul>
+<% if @current_vendor %>
+  <p> Hi <%= @current_vendor.name %></p>
+  <ul>
+    <% @current_vendor.products.each do |product| %>
+      <li><%= product.name %></li>
+      <% end %>
+    </ul>
 
-<form method="get" action="/products/new">
-    <button type="submit">Add New Product</button>
-</form>
+    <form method="get" action="/products/new">
+      <button type="submit">Add New Product</button>
+    </form>
+<% else %>
+  <p> YOU ARE NOT LOGGED IN YO. </p>
+<% end %>

@@ -4,6 +4,8 @@
 <!--make action  -->
 <!--decide on method GET or POST  -->
 
+<!-- <%= session.inspect %> -->
+
 <% if session[:user_id] != nil %>
 <p><%= Vendor.find(session[:user_id]).inspect %></p>
 <% end %>

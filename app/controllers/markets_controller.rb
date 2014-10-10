@@ -1,6 +1,8 @@
 class MarketsController < ApplicationController
   def index
-    @current_vendor = Vendor.find(session[:user_id])
+    if session[:user_id] != nil
+      @current_vendor = Vendor.find(session[:user_id])
+    end
     @markets = Market.all
   end
 

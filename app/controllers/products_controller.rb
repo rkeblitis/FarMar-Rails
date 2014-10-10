@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
   def index
     if session[:user_id] != nil
       @current_vendor = Vendor.find(session[:user_id])
-    else
-      # raise "BLAH!!!"
     end
   end
 
