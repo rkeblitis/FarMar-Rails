@@ -31,3 +31,41 @@
   list-style: none;
   padding: 20px;
 }
+
+.welcome {
+  background: orange;
+  display: inline-block;
+  width: 73%;
+  height: 400px;
+}
+
+.feature {
+  background: purple;
+  display: inline-block;
+  float: right;
+  width: 23%;
+  height: 400px;
+}
+
+.login {
+  background: #85b2c4;
+  width: 73%;
+  display: inline-block;
+  height: 150px;
+}
+
+.bottom_right {
+  background: #21af3b;
+  width: 23%;
+  display: inline-block;
+  height: 150px;
+  float: right;
+  line-height: 150px;
+  text-align: center;
+}
+
+.bottom_right > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
