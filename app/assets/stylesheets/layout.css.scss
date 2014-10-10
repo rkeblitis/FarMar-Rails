@@ -4,6 +4,7 @@
   width: 1000px;
   margin: auto;
 }
+
 .header_container{
   background: red;
   width: 1000px;
@@ -38,11 +39,16 @@
   padding: 20px;
 }
 
-.welcome {
+.content {
   background: orange;
   display: inline-block;
   width: 73%;
   height: 400px;
+  text-align: center;
+}
+
+.content {
+
 }
 
 .feature {
