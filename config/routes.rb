@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  get   "/products/new",  to: "products#new"
+  post  "/products/new",  to: "products#add_product"
   post  "/login",         to: "home#login"
   get   "/markets",       to: "markets#index", as: :markets
   get   "/markets/new",   to: "markets#new"
