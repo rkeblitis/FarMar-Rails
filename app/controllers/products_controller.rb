@@ -27,4 +27,15 @@ class ProductsController < ApplicationController
     redirect_to "/products"
 
   end
+
+  def destroy
+
+    @current_vendor = Vendor.find(session[:user_id])
+    Product.find(params[:id]).destroy
+    redirect_to "/products/delete"
+
+  end
+
+
+
 end

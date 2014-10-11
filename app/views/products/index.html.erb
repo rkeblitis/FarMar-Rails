@@ -8,11 +8,14 @@
     <% @current_vendor.products.each do |product| %>
       <li><%= product.name %> | <%= product.price %></li>
       <% end %>
+      <form method="get" action="/products/new">
+        <button type="submit">Add New Product</button>
+      </form>
+      <form method="get" action="/products/delete">
+          <button type="submit">Delete Product</button>
+      </form>
     </ul>
-
-    <form method="get" action="/products/new">
-      <button type="submit">Add New Product</button>
-    </form>
 <% else %>
-  <p> YOU ARE NOT LOGGED IN YO. </p>
+    <p> YOU ARE NOT LOGGED IN YO. </p>
 <% end %>
+    
