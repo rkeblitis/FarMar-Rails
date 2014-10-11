@@ -2,9 +2,11 @@
 
 <% if @current_vendor %>
   <p> Hi <%= @current_vendor.name %></p>
+  <p> Your current market is <%= @current_vendor.market.name %></p>
+  <p> Below is a list of your products and their prices in cents </p>
   <ul>
     <% @current_vendor.products.each do |product| %>
-      <li><%= product.name %></li>
+      <li><%= product.name %> | <%= product.price %></li>
       <% end %>
     </ul>
 

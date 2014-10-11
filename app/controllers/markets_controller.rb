@@ -20,5 +20,9 @@ class MarketsController < ApplicationController
     end
   end
 
+  def edit
+    find_market
+  end
+
 
 end
