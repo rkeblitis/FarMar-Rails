@@ -1,6 +1,7 @@
 class VendorsController < ApplicationController
 
   def index
+    @vendor = Vendor.all
   end
 
   def new

@@ -1,0 +1,6 @@
+
+<ul>
+  <% Vendor.find(session[:user_id]).products.each do |product| %>
+    <li><a href="/products/<%=product.id %>/delete"><%=product.name %></a></li>
+  <% end %>
+</ul>

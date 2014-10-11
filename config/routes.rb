@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get   "products/delete",  to: "products#delete"
+  get   "products/:id/delete",to: "products#destroy"
+  get   "vendors/index",  to: "vendors#index"
   get   "/products/index",to: "products#index"
   get   "/markets/index", to: "markets#index"
   get   "/products/new",  to: "products#new"
