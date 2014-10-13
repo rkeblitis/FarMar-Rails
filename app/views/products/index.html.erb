@@ -1,4 +1,4 @@
-<h2>PRODUCTS PAGE!!!</h2>
+<h2>Products</h2>
 
 <% if @current_vendor %>
   <p> Hi <%= @current_vendor.name %></p>
@@ -16,6 +16,12 @@
       </form>
     </ul>
 <% else %>
-    <p> YOU ARE NOT LOGGED IN YO. </p>
+    <h3>All Products by Vendor</h3>
+    <% Vendor.all.each do |vendor| %>
+      <h4><%= vendor.name  %></h4>
+      <ul><% vendor.products.each do |product| %>
+        <li><%= product.name %></li>
+          <% end %>
+      </ul>
+    <% end %>
 <% end %>
-    
